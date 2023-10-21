@@ -5,7 +5,7 @@ function inserirUsuario($nome, $cpf, $email, $lattes, $linkedin, $senha) {
     try{
         $conexao = criarConexao();
         $senha = md5($senha);
-        $sql = "INSERT INTO Usuario(nome, cpf, email, lattes, linkedin, user, senha) VALUES(:nome, :cpf, :email, :lattes, :linkedin, :user, :senha);";
+        $sql = "INSERT INTO Usuario(nome, cpf, email, lattes, linkedin, senha) VALUES(:nome, :cpf, :email, :lattes, :linkedin, :senha);";
         $sentenca = $conexao->prepare($sql);
         $sentenca->bindValue(':nome', $nome); 
         $sentenca->bindValue(':cpf', $cpf); 

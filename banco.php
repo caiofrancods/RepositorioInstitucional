@@ -8,6 +8,7 @@
         $conexao = new PDO('mysql:host=localhost; dbname=RepositorioInstitucional', 'root', '');
         $conexao->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
         $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $conexao->exec("SET NAMES 'utf8mb4'");
   		}catch (PDOException $erro){
         echo($erro);
         die();

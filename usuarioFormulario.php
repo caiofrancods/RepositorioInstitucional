@@ -16,7 +16,7 @@
           <div class="form-row mb-4">
               <div class="form-group col-md-4">
                   <label for="nome">Nome Completo</label>
-                  <input type="text" id="nome" name="nome" class="form-control" placeholder="John" required>
+                  <input type="text" id="nome" name="nome" class="form-control" required>
               </div>
               <div class="form-group col-md-4">
                   <label for="cpf">CPF</label>
@@ -24,7 +24,7 @@
               </div>
               <div class="form-group col-md-4">
                   <label for="email">E-mail</label>
-                  <input type="text" id="email" name="email" class="form-control" placeholder="John" required>
+                  <input type="text" id="email" name="email" class="form-control" required>
               </div>
              <div class="form-group col-md-6">
                   <label for="lattes">Link para currículo Lattes</label>
