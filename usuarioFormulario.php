@@ -37,11 +37,7 @@
           </div>
           <h6>Informações de Usuário</h6>
           <div class="form-row separate">
-            <div class="form-group col-md-6">
-              <label for="nomeUsuario">Nome Usuário</label>
-              <input type="text" id="nomeUsuario" class="form-control" placeholder="John" required>
-            </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-12">
                 <label for="senha">Senha</label>
                 <input type="text" id="senha" class="form-control"  required>
             </div>

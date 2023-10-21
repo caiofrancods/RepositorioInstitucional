@@ -1,7 +1,6 @@
 <?php
 
-include_once "banco.php"
-
+include_once "banco.php";
 function salvar($autor, $orientador, $dataPublicacao, $instituicao, $campus, $area, $titulo, $arquivo){
   
   try{
