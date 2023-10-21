@@ -4,7 +4,7 @@ include_once "banco.php";
 function salvar($usuario, $autor, $orientador, $dataPublicacao, $instituicao, $campus, $area, $titulo, $arquivo){
   try{
       $conexao = criarConexao();
-      $sql = "INSERT INTO Trabalho(usuario, autor, orientador, dataPublicacao, instituicao, campus, area, titulo, arquivo) VALUES(:usuario, :autor, :orientador, :dataPublicacao, :instituicao, :campus, :area, :titulo, :arquivo);";
+      $sql = "INSERT INTO Trabalho(usuario, nomeAutor, nomeOrientador, dataPublicacao, instituicao, campus, area, titulo, arquivo) VALUES(:usuario, :autor, :orientador, :dataPublicacao, :instituicao, :campus, :area, :titulo, :arquivo);";
       $sentenca = $conexao->prepare($sql);
       $sentenca->bindValue(':usuario', $usuario); 
       $sentenca->bindValue(':autor', $autor); 
@@ -22,7 +22,7 @@ function salvar($usuario, $autor, $orientador, $dataPublicacao, $instituicao, $c
     
   }catch (PDOException $erro){
       echo ($erro);
-      return 0;
+      die();
   }
 }
 

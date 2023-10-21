@@ -43,9 +43,14 @@
             </div>
         </div>
         <div class="">
-          <div class="form-row">
-
-          </div>
+        <div class="form-row d-flex justify-content-center mb-4 mt-4 rounded">
+          <label for="senha">Escolha o Avatar</label> 
+        </div>
+        <div class="form-row d-flex justify-content-center mb-4 mt-4 rounded"> 
+          <img src="imagens/ciencia.png" alt="avatar cientista">
+          <img class="ml-4" src="imagens/cientista.png" alt="avatar cientista">
+          <img class="ml-4" src="imagens/cientista_masc.png" alt="avatar cientista">
+        </div>
         </div>
         <div class="form-row d-flex justify-content-center">
           <button type="submit" class="btn btn-primary">Enviar</button>

@@ -14,7 +14,7 @@
     }
     ?>
     <div class="corpo">
-      <form action="trabalhoSalvar.php" method="POST">
+      <form action="trabalhoSalvar.php" method="POST" enctype="multipart/form-data">
         <h6>Dados Pessoais</h6>
         <div class="separate">
           <div class="form-row">
@@ -29,7 +29,7 @@
               </div>
               <div class="form-group col-md-4">
                 <label for="dataPublicacao">Data de Publicação</label>
-                <input type="text" id="dataPublicacao" name="dataPublicacao" class="form-control" placeholder="John" required>
+                <input type="date" id="dataPublicacao" name="dataPublicacao" class="form-control" placeholder="John" required>
               </div>
              <div class="form-group col-md-12">
                 <label for="titulo">Título do trabalho</label>
