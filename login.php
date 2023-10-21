@@ -10,7 +10,7 @@
   <div class="cont">
     <?php include_once "geral/menu.php" ?>
     <div class="corpo login">
-      <form class="form-signin" id="formularioLogin">
+      <form class="form-signin" id="formularioLogin" action="usuarioAutenticar.php" method="POST">
         <h6 class="h3 mb-3 font-weight-normal text-center">Faça login</h6>
         <div class="separate">
           <div class="form-row">
