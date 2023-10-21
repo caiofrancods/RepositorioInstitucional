@@ -21,7 +21,7 @@ function salvar($usuario, $autor, $orientador, $dataPublicacao, $instituicao, $c
       return $idPessoa;
     
   }catch (PDOException $erro){
-      criarArquivoErro($erro);
+      echo ($erro);
       return 0;
   }
 }
@@ -40,7 +40,7 @@ function excluir($id){
       return $sentenca->rowCount();
     
   }catch (PDOException $erro){
-      criarArquivoErro($erro);
+    echo ($erro);
       return 0;
   }
 }
@@ -56,7 +56,7 @@ function excluir($id){
       $conexao = null;
       return $sentenca->fetchAll();
   }catch (PDOException $erro){
-      criarArquivoErro($erro);
+      echo ($erro);
 
   }
 }  
@@ -74,7 +74,7 @@ function trabalhosPorNome($autor){
       return $sentenca->fetch();
     
   }catch (PDOException $erro){
-      criarArquivoErro($erro);
+      echo($erro);
   }
 }    
 
