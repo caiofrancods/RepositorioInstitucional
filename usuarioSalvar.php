@@ -7,8 +7,9 @@
     $linkedin = $_POST['linkedin'];
     $lattes = $_POST['lattes'];
     $senha = $_POST['senha'];
+    $avatar = $_POST['avatar'];
 
-    $quantidade = inserirUsuario($nome, $cpf, $email, $lattes, $linkedin, $senha);
+    $quantidade = inserirUsuario($nome, $cpf, $email, $lattes, $linkedin, $senha, $avatar);
 
     if($quantidade > 0){
 		echo  "<script>alert('Registro salvo com sucesso!');</script>";

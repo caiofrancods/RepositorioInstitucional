@@ -15,7 +15,8 @@ CREATE TABLE Usuario (
     cpf VARCHAR(255) NOT NULL UNIQUE,
     lattes VARCHAR(500) NOT NULL,
     linkedin VARCHAR(500) NOT NULL,
-    senha VARCHAR(255) NOT NULL
+    senha VARCHAR(255) NOT NULL,
+    avatar INT NOT NULL
 );
 
 CREATE TABLE Trabalho (
@@ -34,10 +35,10 @@ CREATE TABLE Trabalho (
 
 
 -- Inserir alguns dados na tabela Usuario
-INSERT INTO Usuario (nome, email, cpf, lattes, linkedin, senha) VALUES
-    ('João Silva', 'joao.silva@example.com', '12345678901', 'https://lattes.com/joao', 'https://linkedin.com/joao', '202cb962ac59075b964b07152d234b70'),
-    ('Maria Santos', 'maria.santos@example.com', '98765432101', 'https://lattes.com/maria', 'https://linkedin.com/maria', '202cb962ac59075b964b07152d234b70'),
-    ('Pedro Alves', 'pedro.alves@example.com', '45678912301', 'https://lattes.com/pedro', 'https://linkedin.com/pedro', '202cb962ac59075b964b07152d234b70');
+INSERT INTO Usuario (nome, email, cpf, lattes, linkedin, senha, avatar) VALUES
+    ('João Silva', 'joao.silva@example.com', '12345678901', 'https://lattes.com/joao', 'https://linkedin.com/joao', '202cb962ac59075b964b07152d234b70', 1),
+    ('Maria Santos', 'maria.santos@example.com', '98765432101', 'https://lattes.com/maria', 'https://linkedin.com/maria', '202cb962ac59075b964b07152d234b70', 2),
+    ('Pedro Alves', 'pedro.alves@example.com', '45678912301', 'https://lattes.com/pedro', 'https://linkedin.com/pedro', '202cb962ac59075b964b07152d234b70', 4);
 
 -- Inserir alguns dados na tabela Trabalho
 INSERT INTO Trabalho (usuario, nomeAutor, nomeOrientador, dataPublicacao, instituicao, campus, area, titulo, arquivo) VALUES

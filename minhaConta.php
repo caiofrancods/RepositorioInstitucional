@@ -35,6 +35,9 @@
                   <input type="text" id="linkedin" class="form-control" value="<?php echo $dadosUsuario['linkedin']?>" required readonly>
               </div>
           </div>
+  <form class="form-row d-flex justify-content-end" action="sair.php">
+          <button type="submit" class="btn btn-danger">Sair</button>
+  </form>
    </div>
   </div>  
 </body>

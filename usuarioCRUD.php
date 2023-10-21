@@ -1,11 +1,11 @@
 <?php
 include_once "banco.php";
 
-function inserirUsuario($nome, $cpf, $email, $lattes, $linkedin, $senha) {
+function inserirUsuario($nome, $cpf, $email, $lattes, $linkedin, $senha, $avatar) {
     try{
         $conexao = criarConexao();
         $senha = md5($senha);
-        $sql = "INSERT INTO Usuario(nome, cpf, email, lattes, linkedin, senha) VALUES(:nome, :cpf, :email, :lattes, :linkedin, :senha);";
+        $sql = "INSERT INTO Usuario(nome, cpf, email, lattes, linkedin, senha, avatar) VALUES(:nome, :cpf, :email, :lattes, :linkedin, :senha, :avatar);";
         $sentenca = $conexao->prepare($sql);
         $sentenca->bindValue(':nome', $nome); 
         $sentenca->bindValue(':cpf', $cpf); 
@@ -13,6 +13,7 @@ function inserirUsuario($nome, $cpf, $email, $lattes, $linkedin, $senha) {
         $sentenca->bindValue(':lattes', $lattes); 
         $sentenca->bindValue(':linkedin', $linkedin); 
         $sentenca->bindValue(':senha', $senha); 
+        $sentenca->bindValue(':avatar', $avatar); 
         
         $sentenca->execute();
         $id = $conexao->lastInsertId();

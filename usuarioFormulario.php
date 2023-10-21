@@ -43,14 +43,24 @@
             </div>
         </div>
         <div class="">
-        <div class="form-row d-flex justify-content-center mb-4 mt-4 rounded">
-          <label for="senha">Escolha o Avatar</label> 
+          <div class="form-row d-flex justify-content-center mb-4 mt-4 rounded">
+            <label for="senha">Escolha o Avatar</label> 
+          </div>
+          <div class="form-row d-flex justify-content-center mb-4 mt-4 rounded"> 
+            <img src="imagens/ciencia.png" alt="avatar cientista">
+            <img class="ml-4" src="imagens/cientista.png" alt="avatar cientista">
+            <img class="ml-4" src="imagens/cientista_masc.png" alt="avatar cientista">
+          </div>
         </div>
-        <div class="form-row d-flex justify-content-center mb-4 mt-4 rounded"> 
-          <img src="imagens/ciencia.png" alt="avatar cientista">
-          <img class="ml-4" src="imagens/cientista.png" alt="avatar cientista">
-          <img class="ml-4" src="imagens/cientista_masc.png" alt="avatar cientista">
-        </div>
+        <div class="form-group col-md-12">
+          <label for="campus">Avatar</label>
+            <select id="avatar" name="avatar" class="form-control" required>
+                <option selected hidden>Escolha...</option>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="4">Nenhum</option>
+            </select>
         </div>
         <div class="form-row d-flex justify-content-center">
           <button type="submit" class="btn btn-primary">Enviar</button>

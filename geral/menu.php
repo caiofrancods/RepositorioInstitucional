@@ -24,6 +24,21 @@
     </div>
   </div>
   <div class="cabecalho d-flex justify-content-between align-items-center">
-    <a href="minhaConta.php"><img src="imagens/usuarioPadrao.png" alt="foto padrao" class="logo"></a>
+    <?php if(isset($_SESSION['dadosUsuario'])){
+      $dadosUsuario = $_SESSION['dadosUsuario'];
+      $avatar = $dadosUsuario['avatar'];
+      if($avatar == 1){
+        echo '<a href="minhaConta.php"><img src="imagens/ciencia.png" alt="foto padrao" class="logo"></a>';
+      }else if($avatar == 2){
+        echo '<a href="minhaConta.php"><img src="imagens/cientista.png" alt="foto padrao" class="logo"></a>';
+      }else if($avatar == 3){
+        echo '<a href="minhaConta.php"><img src="imagens/cientista_masc.png" alt="foto padrao" class="logo"></a>';
+      }else{
+        echo '<a href="minhaConta.php"><img src="imagens/usuarioPadrao.png" alt="foto padrao" class="logo"></a>';
+      }
+    }else{
+      echo '<a href="minhaConta.php"><img src="imagens/usuarioPadrao.png" alt="foto padrao" class="logo"></a>';
+    }?>
+    
   </div>
 </div>

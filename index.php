@@ -19,7 +19,7 @@ $trabalhos = listar();
             <div class="card bg-light mb-3 mb-3">
               <div class="card-header">'.$registro['nomeAutor'].'</div>
               <div class="card-body">
-                <h5 class="card-title">'.$registro['titulo'].'</h5>
+                <h6 class="card-title d-flex wrap">'.$registro['titulo'].'</h6>
                 <p class="card-text">Resumo...</p>
               </div>
             </div> 
