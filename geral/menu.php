@@ -1,3 +1,10 @@
+<?php
+  session_start();
+  if(isset($_SESSION['dadosUsuario'])){
+    $dadosUsuario = $_SESSION['dadosUsuario'];		
+  }
+?>
+
 <div class="cabecalho d-flex justify-content-between align-items-center">
   <div class="cabecalho d-flex justify-content-between align-items-center">
     <div class="dropdown">

@@ -8,12 +8,17 @@
 
 <body>
   <div class="cont">
-    <?php include_once "geral/menu.php" ?>
+  <?php include_once "geral/menu.php";
+    if(!isset($_SESSION['dadosUsuario'])){
+      echo "<script>alert('Faça login primeiro!'); location.href='login.php';</script>"; 			
+    }
+    ?>
     <div class="corpo">
       <form action="pastadestino.php" method="POST">
         <h6>Dados Pessoais</h6>
         <div class="separate">
           <div class="form-row">
+              <input type="text" id="usuario" class="d-none" value="<?php echo $dadosUsuario[0]; ?> " required>
               <div class="form-group col-md-4">
                   <label for="autor">Nome Autor</label>
                   <input type="text" id="autor" class="form-control" placeholder="John" required>
@@ -26,7 +31,7 @@
                 <label for="dataPublicacao">Data de Publicação</label>
                 <input type="text" id="dataPublicacao" class="form-control" placeholder="John" required>
               </div>
-             <div class="form-group col-md-8">
+             <div class="form-group col-md-12">
                 <label for="titulo">Título do trabalho</label>
                 <input type="text" id="titulo" class="form-control" placeholder="John" required>
               </div>

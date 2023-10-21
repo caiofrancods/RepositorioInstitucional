@@ -40,7 +40,23 @@ function consultarUsuario($id) {
         return 0;
     }
 }
+function autenticarUsuario($email, $senha) {
+    try {
+        $sql = "SELECT * FROM Usuario WHERE email = :email AND senha = :senha;";
 
+        $conexao = criarConexao();
+        $sentenca = $conexao->prepare($sql);
+        $sentenca->bindValue(':email', $email);
+        $sentenca->bindValue(':senha', md5($senha));
+
+        $sentenca->execute();
+        $conexao = null;
+
+        return $sentenca->fetch();
+    } catch (PDOException $erro) {
+        echo $erro;
+    }
+}
 // function atualizarUsuario($id, $nome, $email,  $cpf, $linkedin, $lattes, $nomeUsuario) {
 //     global $conn;
     

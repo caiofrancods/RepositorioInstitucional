@@ -8,7 +8,11 @@
   
 <body>
   <div class="cont">
-    <?php include_once "geral/menu.php" ?>
+    <?php include_once "geral/menu.php";
+    if(!isset($_SESSION['dadosUsuario'])){
+      echo "<script>alert('Faça login primeiro!'); location.href='login.php';</script>"; 			
+    }
+    ?>
      <div class="form-row mb-4">
               <div class="form-group col-md-4">
                   <label for="contaNome">Nome Completo</label>

@@ -15,12 +15,12 @@
         <div class="separate">
           <div class="form-row">
               <div class="form-group col-md-6">
-                  <label for="loginUsuario">Nome de Usuário</label>
-                  <input type="text" id="loginUsuario" class="form-control" required>
+                  <label for="loginUsuario">E-mail</label>
+                  <input type="text" id="email" name="email" class="form-control" required>
               </div>
               <div class="form-group col-md-6">
                   <label for="loginSenha">Senha</label>
-                  <input type="text" id="loginSenha" class="form-control"  required>
+                  <input type="text" id="senha" name="senha" class="form-control"  required>
               </div>
           </div>
         </div>
