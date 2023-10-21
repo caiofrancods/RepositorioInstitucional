@@ -1,16 +1,17 @@
 <?php
 	include_once "trabalhoCRUD.php";
-	
+	$usuario = $_POST['usuario'];
 	$autor = $_POST['autor'];
-$orientador = $_GET['orientador'];
+	$orientador = $_POST['orientador'];
 	$dataPublicacao = $_POST['publicacao'];
+	$instituicao = $_POST['instituicao'];
 	$campus = $_POST['campus'];
 	$area = $_POST['area'];
-$titulo = $_POST['titulo'];
-$arquivo = $_POST['arquivo'];
+	$titulo = $_POST['titulo'];
+	$arquivo = $_POST['arquivo'];
 
 
-	$quantidade = salvarExercicio($autor, $orientador, $dataPublicacao, $campus, $area, $titulo, $arquivo);
+	$quantidade = salvar($usuario, $autor, $orientador, $dataPublicacao, $instituicao, $campus, $area, $titulo, $arquivo);
 
 	if($quantidade > 0){
 		echo  "<script>alert('Registro salvo com sucesso!');</script>";
