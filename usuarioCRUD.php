@@ -29,7 +29,7 @@ function inserirUsuario($nome, $cpf, $email, $lattes, $linkedin, $senha, $avatar
 function consultarUsuario($id) {
     try{
         $conexao = criarConexao();
-        $sql = "SELECT * FROM Usuario WHERE id = :id;";
+        $sql = "SELECT * FROM Usuario WHERE idUsuario = :id;";
         $sentenca = $conexao->prepare($sql);
         $sentenca->bindValue(':id', $id); 
         $sentenca->execute();

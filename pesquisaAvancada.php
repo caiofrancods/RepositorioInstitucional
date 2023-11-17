@@ -1,66 +1,28 @@
 <?php
-$autor = $_GET['autor'];
-$orientador = $_GET['orientador'];
-	$dataPublicacao = $_GET['dataPublicacao'];
-	$campus = $_GET['campus'];
-	$area = $_GET['area'];
-$instituicao = $_GET['instituicao'];
-$titulo = $_GET['titulo'];
-$arquivo = $_GET['arquivo'];
+    include_once "trabalhoCRUD.php";
+    $titulo = $_POST['pesquisaTitulo'];
 
 
-$host = "localhost";
-$username = "";
-$password = "";
-$database = "";
+    $titulos = pesquisa($titulo);
 
-$conn = new mysqli($host, $username, $password, $database);
-
-if ($conn->connect_error) {
-    die("Erro na conexão com o banco de dados: " . $conn->connect_error);
-}
-
-$sql = "SELECT * FROM tabela WHERE 1";
-
-if (!empty($autor)) {
-    $sql .= " AND autor = '$autor'";
-}
-if (!empty($orientador)) {
-    $sql .= " AND orientador = '$orientador'";
-}
-
-if (!empty($dataPublicacao)) {
-    $sql .= " AND dataPublicacao = '$dataPublicacao'";
-}
-
-if (!empty($area)) {
-    $sql .= " AND area = '$area'";
-}
-if (!empty($campus)) {
-    $sql .= " AND campus = '$campus'";
-}
-if (!empty($instituicao)) {
-    $sql .= " AND instituicao = '$instituicao'";
-}
-if (!empty($titulo)) {
-    $sql .= " AND titulo = '$titulo'";
-}
-if (!empty($arquivo)) {
-    $sql .= " AND arquivo = 'arquivo'";
-}
-
-// Executar a consulta SQL
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    
-    while ($row = $result->fetch_assoc()) {
+    if ($titulos != null) {
         
+        foreach ($titulos as $t) {
+            echo $t['nomeOrientador'];
+        }
+    } else {
+        echo "Nenhum resultado encontrado.";
     }
-} else {
-    echo "Nenhum resultado encontrado.";
-}
-
-
-$conn->close();
 ?>
+<?php
+        foreach($trabalhos as $registro){
+          echo '<div class="col-2">
+            <div class="card bg-light mb-3 mb-3">
+              <div class="card-header">'.$registro['nomeAutor'].'</div>
+              <div class="card-body">
+                <h6 class="card-title d-flex wrap">'.$registro['titulo'].'</h6>
+                <p class="card-text">Resumo...</p>
+              </div>
+            </div> 
+          </div>';
+        }?>

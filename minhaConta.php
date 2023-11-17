@@ -20,19 +20,23 @@
               </div>
               <div class="form-group col-md-4">
                   <label for="contaEmail">E-mail</label>
-                  <input type="text" id="contaEmail" class="form-control" value="<?php echo $dadosUsuario['email']?>" required readonly>
+                  <input type="text" id="contaEmail" class="form-control" value="<?php echo $dadosUsuario['email'];?>" required readonly>
               </div>
+              <?php 
+               include_once "usuarioCRUD.php";
+               $user = consultarUsuario($dadosUsuario["idUsuario"]);
+              ?>
               <div class="form-group col-md-4">
                   <label for="contaCpf">CPF</label>
-                  <input type="text" id="contaCpf" class="form-control" value="<?php echo $dadosUsuario['cpf']?>" required readonly>
+                  <input type="text" id="contaCpf" class="form-control" value="<?php echo $user['cpf'];?>" required readonly>
               </div>
               <div class="form-group col-md-6">
                   <label for="lattes">Link para currículo Lattes</label>
-                  <input type="text" id="lattes" class="form-control" placeholder="John" value="<?php echo $dadosUsuario['lattes']?>" required readonly>
+                  <input type="text" id="lattes" class="form-control" placeholder="John" value="<?php echo $user['lattes'];?>" required readonly>
               </div>
               <div class="form-group col-md-6">
                   <label for="linkedin">Link para LinkedIn</label>
-                  <input type="text" id="linkedin" class="form-control" value="<?php echo $dadosUsuario['linkedin']?>" required readonly>
+                  <input type="text" id="linkedin" class="form-control" value="<?php echo $user['linkedin'];?>" required readonly>
               </div>
           </div>
   <form class="form-row d-flex justify-content-end" action="sair.php">

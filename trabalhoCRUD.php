@@ -78,5 +78,26 @@ function trabalhosPorNome($autor){
   }
 }    
 
+function pesquisa($trabalho){
+  try{
+      $sql = "SELECT * FROM Trabalho WHERE LOWER(titulo) LIKE :titulo;";
+
+      $conexao = criarConexao();        
+      $sentenca = $conexao->prepare($sql);
+      $sentenca->bindValue(':titulo', $trabalho); 
+  
+      $sentenca->execute();     
+      $conexao = null;
+      if($sentenca->rowCount() > 0){
+        return $sentenca->fetchAll();
+      }else{
+        return null;
+      }
+    
+  }catch (PDOException $erro){
+      echo($erro);
+  }
+}    
+
 
 ?>

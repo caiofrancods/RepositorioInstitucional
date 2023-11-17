@@ -3,7 +3,7 @@
 
 <head>
   <?php include_once "geral/head.php" ?>
-  <title>Pesquisa Avançada</title>
+  <title>Resultado da Pesquisa/title>
 </head>
 
 <body>
@@ -11,12 +11,10 @@
     <?php include_once "geral/menu.php" ?>
     <div class="corpo">
        <h3 class="text-center">Pesquisar</h3>
-       <form class="form-signin" id="formulario" action="pesquisaAvancada.php" method="POST">
         <div class="separate">
             <div class="form-row">
               <div class="form-group col-md-12 mt-4">
-                  <label for="pesquisaTitulo">Título do trabalho</label>
-                  <input type="text" id="pesquisaTitulo" name="pesquisaTitulo" class="form-control" placeholder="Título" required>
+                <button type="submit" class="btn btn-primary">Voltar</button>
                 </div>
               <div class="form-group col-md-12 mt-2">
                 <button type="submit" class="btn btn-primary">Pesquisar</button>
@@ -25,7 +23,6 @@
 
           </div>
         </div>
-      </form>
       </div>
     </div>
   </div>  
