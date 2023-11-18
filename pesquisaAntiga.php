@@ -1,7 +1,7 @@
 <?php
 
 include_once 'trabalhoCRUD.php';
-$trabalhos = listar();
+$trabalhos = listarAntigos();
 
 ?>
 
@@ -10,7 +10,7 @@ $trabalhos = listar();
 
 <head>
   <?php include_once "geral/head.php" ?>
-  <title>Filtros</title>
+  <title>Pesquisa Avançada</title>
 </head>
 
 <body>

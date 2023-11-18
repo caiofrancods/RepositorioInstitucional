@@ -10,7 +10,7 @@
     <div class="dropdown">
       <button class="dropbtn">|||</button>
       <div class="dropdown-content">
-        <a href="pesquisar.php">Pesquisa Avançada</a>
+        <a href="pesquisar.php">Filtros</a>
         <a href="trabalhoFormulario.php">Enviar Trabalho</a>
         <a href="sobreIC.php">Sobre a Iniciação Científica</a>
         <div class="dropdown-divider"></div>

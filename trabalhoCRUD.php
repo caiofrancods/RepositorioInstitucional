@@ -59,6 +59,22 @@ function excluir($id){
       echo ($erro);
 
   }
+} 
+
+function listarAntigos(){
+  try{
+      $sql = "SELECT * FROM Trabalho ORDER BY dataPublicacao DESC;";
+
+      $conexao = criarConexao();        
+      $sentenca = $conexao->prepare($sql);
+  
+      $sentenca->execute();     
+      $conexao = null;
+      return $sentenca->fetchAll();
+  }catch (PDOException $erro){
+      echo ($erro);
+
+  }
 }  
 
 function trabalhosPorNome($autor){
